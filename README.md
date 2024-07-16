@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# EMCEE Frontend Interview Challenge
+You are required to build a simple React application that fetches and displays a list of Pokémon from the PokeAPI. The app should have the following features:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- **Fetch Pokémon List:** Fetch a list of Pokémon from the PokeAPI endpoint: https://pokeapi.co/api/v2/pokemon.
+- **Display Pokémon List:** Display the list of Pokémon names and their images in a grid.
+- **Pagination:** Implement pagination to navigate through different pages of Pokémon data.
+- **Pokémon Details:** When a Pokémon name is clicked, navigate to a new page that displays details about that Pokémon. You can fetch the details from the PokeAPI endpoint: https://pokeapi.co/api/v2/pokemon/{id or name}.
+- **Display Pokémon Image:** On the details page, display an image of the Pokémon using the official artwork endpoint: https://github.com/PokeAPI/sprites/raw/master/sprites/pokemon/other/official-artwork/{id}.png.
 
-## Available Scripts
+## Requirements
+- Use React Router for navigating between the list and details pages.
+- Use the native fetch API for making network requests.
+- Handle loading states and errors gracefully.
+- Use TailwindCSS for styling.
 
-In the project directory, you can run:
+## Notes
+- All the packages you need are already included in package.json
+- You can use google to lookup any resources or ask your interviewer any questions.
+- The only resource that is off limits is LLMs such as ChatGPT & Claude.
 
-### `npm start`
+## Data fetching
+To fetch the list of Pokémon, you can use the following API call:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Pokemon List API
+`GET https://pokeapi.co/api/v2/pokemon?limit=20&offset=0`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Pokemon Detail API
+`GET https://pokeapi.co/api/v2/pokemon/{name}`
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Pokemon Image URL
+`GET https://github.com/PokeAPI/sprites/raw/master/sprites/pokemon/other/official-artwork/{id}.png`
