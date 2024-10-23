@@ -1,4 +1,4 @@
-# EMCEE Frontend Interview Challenge
+
 You are required to build a simple React application that fetches and displays a list of Pokémon from the PokeAPI. The app should have the following features:
 
 - **Fetch Pokémon List:** Fetch a list of Pokémon from the PokeAPI endpoint: https://pokeapi.co/api/v2/pokemon.
