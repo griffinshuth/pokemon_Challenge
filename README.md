@@ -16,7 +16,7 @@ You are required to build a simple React application that fetches and displays a
 ## Notes
 - All the packages you need are already included in package.json
 - You can use google to lookup any resources or ask your interviewer any questions.
-- The only resource that is off limits is LLMs such as ChatGPT & Claude.
+
 
 ## Data fetching
 To fetch the list of Pokémon, you can use the following API call:
